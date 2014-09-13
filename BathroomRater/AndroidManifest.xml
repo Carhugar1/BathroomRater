@@ -38,6 +38,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.bathroomrater.UniversitySelectActivity" />
         </activity>
+        <activity
+            android:name=".AddBathroom"
+            android:label="@string/title_activity_add_bathroom"
+            android:parentActivityName=".SelectionHubActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bathroomrater.SelectionHubActivity" />
+        </activity>
     </application>
 
 </manifest>

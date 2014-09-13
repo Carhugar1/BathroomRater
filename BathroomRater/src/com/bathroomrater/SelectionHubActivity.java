@@ -5,25 +5,44 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class SelectionHubActivity extends ActionBarActivity {
 
+	private String uni;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_selection_hub);
 		
 		Intent intent = getIntent();
-		String uni = intent.getStringExtra(UniversitySelectActivity.UNIVERSITY);
+		this.uni = intent.getStringExtra(UniversitySelectActivity.UNIVERSITY);
 		
+		TextView uni_textview = (TextView)findViewById(R.id.selhub_textview);
+		uni_textview.setText(this.uni);
+		
+		/*
 		// Create the text view
 	    TextView textView = new TextView(this);
 	    textView.setTextSize(40);
 	    textView.setText(uni);
+	    
+	    textView.setLayoutParams(new RelativeLayout.LayoutParams(
+	                                         RelativeLayout.LayoutParams.WRAP_CONTENT,
+	                                         RelativeLayout.LayoutParams.WRAP_CONTENT));
+
+	    //android:layout_alignParentTop="true"
+	    //android:layout_centerHorizontal="true"
+	    
+	    this.addView(textView);
 
 	    // Set the text view as the activity layout
 	    setContentView(textView);
+	    */
 	}
 
 	@Override
@@ -43,5 +62,14 @@ public class SelectionHubActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void addBathroom(View view){
+		Intent intent = new Intent(this, AddBathroom.class);
+		
+		//Pass the university data to next activity
+		intent.putExtra(UniversitySelectActivity.UNIVERSITY, this.uni);
+		
+		startActivity(intent);
 	}
 }

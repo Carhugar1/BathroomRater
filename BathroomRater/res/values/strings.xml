@@ -7,5 +7,11 @@
     <string name="title_activity_university_select">UniversitySelectActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_selection_hub">SelectionHub</string>
+    <string name="title_activity_add_bathroom">AddBathroom</string>
+    <string name="type_male">Male</string>
+    <string name="type_female">Female</string>
+    <string name="type_unisex">Unisex</string>
+    <string name="type_family">Family</string>
+    <string name="bathroomtype_title">Bathroom Type</string>
 
 </resources>

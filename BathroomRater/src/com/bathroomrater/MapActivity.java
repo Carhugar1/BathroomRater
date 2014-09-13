@@ -5,32 +5,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
-public class SelectionHubActivity extends ActionBarActivity {
+public class MapActivity extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_selection_hub);
+		setContentView(R.layout.activity_map);
 		
 		Intent intent = getIntent();
-		String uni = intent.getStringExtra(UniversitySelectActivity.UNIVERSITY);
-		
-		// Create the text view
-	    TextView textView = new TextView(this);
-	    textView.setTextSize(40);
-	    textView.setText(uni);
-
-	    // Set the text view as the activity layout
-	   // setContentView(textView);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.selection_hub, menu);
+		getMenuInflater().inflate(R.menu.map, menu);
 		return true;
 	}
 
@@ -44,10 +34,5 @@ public class SelectionHubActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
-	
-	public void BringUpMap(View view) {
-		Intent map = new Intent(this, MapActivity.class);
-		startActivity(map);
 	}
 }

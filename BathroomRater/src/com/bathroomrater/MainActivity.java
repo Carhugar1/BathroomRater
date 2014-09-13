@@ -1,10 +1,11 @@
 package com.bathroomrater;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -13,6 +14,9 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SystemClock.sleep(2000);
+        Intent intent = new Intent(this, UniversitySelectActivity.class);
+        startActivity(intent);
     }
 
 

@@ -3,16 +3,24 @@ package com.bathroomrater;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
 public class UniversitySelectActivity extends ActionBarActivity {
 	
 	private ListView uni_listview;
+	
+	private Intent intent;
+	
+	public final static String UNIVERSITY = "com.BathroomRater.UniversitySelectActivity.UNIVERSITY";
 
 	/**
 	 * Setup university list
@@ -23,6 +31,8 @@ public class UniversitySelectActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_university_select);
+		
+		intent = new Intent(this, SelectionHubActivity.class);
 		
 		uni_listview = (ListView) findViewById(R.id.listView1);
 		
@@ -52,7 +62,24 @@ public class UniversitySelectActivity extends ActionBarActivity {
                  android.R.layout.simple_list_item_1,
                  uni_arrlist );
 
-         uni_listview.setAdapter(arrayAdapter); 
+		uni_listview.setAdapter(arrayAdapter); 
+         
+		// ListView Item Click Listener
+		uni_listview.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                 
+			// ListView Clicked item value
+			String  itemValue    = (String) uni_listview.getItemAtPosition(position);
+			
+			intent.putExtra(UNIVERSITY, itemValue);
+			
+			startActivity(intent);
+			}
+		});
+			
+
 		
 	}
 
@@ -74,4 +101,6 @@ public class UniversitySelectActivity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
 }

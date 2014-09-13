@@ -6,5 +6,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_university_select">UniversitySelectActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_selection_hub">SelectionHub</string>
 
 </resources>

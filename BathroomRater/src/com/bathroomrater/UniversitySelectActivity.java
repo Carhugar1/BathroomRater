@@ -32,6 +32,15 @@ public class UniversitySelectActivity extends ActionBarActivity {
 		uni_arrlist.add("Iowa State University");
 		uni_arrlist.add("Some other place");
 		uni_arrlist.add("Meh");
+		uni_arrlist.add("sdfsd");
+		uni_arrlist.add("sdafgdfgh");
+		uni_arrlist.add("iutygjg");
+		uni_arrlist.add("hmnfdnfdgb");
+		uni_arrlist.add("vfvdsf");
+		uni_arrlist.add("ytytrdye");
+		uni_arrlist.add("erthghcg");
+		uni_arrlist.add("nbvcnhmhg");
+		uni_arrlist.add("dhgrdtynh");
 		
 		//Sort list of universities
 		Collections.sort(uni_arrlist);

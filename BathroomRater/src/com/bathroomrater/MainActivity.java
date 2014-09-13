@@ -14,9 +14,9 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // SystemClock.sleep(2000);
-        // Intent intent = new Intent(this, UniversitySelectActivity.class);
-        // startActivity(intent);
+        SystemClock.sleep(2000);
+        Intent intent = new Intent(this, UniversitySelectActivity.class);
+        startActivity(intent);
     }
 
 

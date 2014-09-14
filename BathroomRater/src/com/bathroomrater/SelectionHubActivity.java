@@ -72,4 +72,14 @@ public class SelectionHubActivity extends ActionBarActivity {
 		
 		startActivity(intent);
 	}
+	
+	public void chooseABuilding(View view) {
+		Intent intent = new Intent(this, AddBathroom.class);
+		
+		//Pass the university data to next activity
+		intent.putExtra(UniversitySelectActivity.UNIVERSITY, this.uni);
+		
+		startActivity(intent);
+	}
+	}
 }

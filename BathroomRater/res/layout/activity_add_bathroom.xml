@@ -14,7 +14,7 @@
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/addbathroom_textview"
+            android:id="@+id/type_title_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -22,10 +22,10 @@
             android:text="@string/bathroomtype_title" />
         
         <RadioGroup
-            android:id="@+id/addbathroom_radiogroup"
+            android:id="@+id/type_radiogroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/addbathroom_textview" >
+            android:layout_below="@id/type_title_textview" >
             
             <RadioButton
                 android:id="@+id/addbathroom_male"
@@ -52,6 +52,36 @@
                 android:layout_height="wrap_content"
                 android:text="@string/type_family" />
         </RadioGroup>
+
+        <Spinner
+            android:id="@+id/buildings_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/type_radiogroup"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/floors_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buildings_spinner" />
+
+        <TextView
+            android:id="@+id/name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/floors_spinner"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/name_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_textview"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
 
     </RelativeLayout>
 

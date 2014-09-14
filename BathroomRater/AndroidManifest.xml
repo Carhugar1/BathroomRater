@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!--
      The following two permissions are not required to use
-     Google Maps Android API v2, but are recommended.
+     Google Maps Android API v2, but are recommended.
     -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -60,6 +60,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.bathroomrater.SelectionHubActivity" />
         </activity>
+        <activity
+            android:name=".BathroomActivity"
+            android:label="@string/title_activity_bathroom"
+            android:parentActivityName=".MapActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bathroomrater.MapActivity" />
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -67,6 +75,8 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyDWMSDc2q7xCfSHdMqt1gb99QzCE-hJB-Y" />
+
+        
     </application>
 
 </manifest>

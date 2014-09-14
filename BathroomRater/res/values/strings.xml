@@ -8,5 +8,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_selection_hub">SelectionHub</string>
     <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_bathroom">BathroomActivity</string>
+    <string name="string_1">Cleanliness</string>
+    <string name="string_2">Privacy</string>
+    <string name="string_3">Scent</string>
+    <string name="string_4">Supplies</string>
+    <string name="string_5">Experience</string>
+    <string name="string_6">Comments</string>
 
 </resources>

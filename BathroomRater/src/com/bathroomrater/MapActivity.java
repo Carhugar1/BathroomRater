@@ -65,6 +65,8 @@ public class MapActivity extends ActionBarActivity {
         Location location = locationManager.getLastKnownLocation(
         		locationManager.getBestProvider(criteria, false));
         
+        final Intent intent = new Intent(this, BathroomActivity.class);
+        
         // make sure your location isn't empty
         if (location != null) {
         	
@@ -93,8 +95,8 @@ public class MapActivity extends ActionBarActivity {
 				@Override
 				public void onInfoWindowClick(Marker arg0) {
 					if (arg0.getTitle().compareTo("You") != 0) { // nothing happens on the user
-					Intent intent = new Intent(this, );
 					intent.putExtra("BathroomName", arg0.getTitle());
+					startActivity(intent);
 					}
 				}
             	 
